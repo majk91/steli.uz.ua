@@ -24,5 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php wp_footer(); ?>
 
+<script src="test/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
 </body>
 </html>

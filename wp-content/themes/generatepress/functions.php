@@ -1,4 +1,35 @@
 <?php
+
+add_shortcode("wfm-cars", "wfm_add_cat_post");
+function wfm_add_cat_post($atts){
+	if(empty($atts['id'])) return;
+	$per_page = !empty($atts['count']) ? (int)$atts['count'] : 3;
+	if($per_page < 1)$per_page = 3;
+	
+	$cats_id = explode(',', $atts['id']);
+	
+	$get_posts = new WP_Query(
+		array(
+			'category__in' => $cats_id,
+			'posts_per_page' => $per_page
+		)
+	);
+	$content = '';
+	if($get_posts->have_posts()){
+		$content .= '<div class="insert-posts">';
+		while($get_posts->have_posts()) {
+			$get_posts->the_post();
+			$content .="<div class='posts-item'>";
+			$content .=get_the_post_thumbnail(get_the_ID(), 'full', array('title'=>get_the_title()));
+			$content .= '<p>'.get_the_title().'</p>';
+			$content .="</div>";
+		}
+		$content .= '</div>';
+	}
+
+	return $content;
+}
+
 /**
  * GeneratePress functions and definitions
  *
