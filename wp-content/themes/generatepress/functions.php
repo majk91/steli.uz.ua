@@ -20,13 +20,13 @@ function wfm_add_cat_post($atts){
 		while($get_posts->have_posts()) {
 			$get_posts->the_post();
 			$content .="<div class='posts-item'>";
+			$content .= get_the_content();
 			$content .=get_the_post_thumbnail(get_the_ID(), 'full', array('title'=>get_the_title()));
 			$content .= '<p>'.get_the_title().'</p>';
 			$content .="</div>";
 		}
 		$content .= '</div>';
 	}
-
 	return $content;
 }
 
