@@ -30,3 +30,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div id="page" class="hfeed site grid-container container grid-parent">
 		<div id="content" class="site-content">
 			<?php do_action( 'generate_inside_container' ); ?>
+
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
