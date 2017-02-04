@@ -913,8 +913,47 @@ function generate_construct_footer() {
 	<footer class="site-info" itemtype="http://schema.org/WPFooter" itemscope="itemscope">
 		<div class="inside-site-info <?php if ( 'full-width' !== generate_get_setting( 'footer_inner_width' ) ) : ?>grid-container grid-parent<?php endif; ?>">
 			<?php do_action( 'generate_before_copyright' ); ?>
-			<div class="copyright-bar">
-				<?php do_action( 'generate_credits' ); ?>
+			<div class="copyright-bar">	&copy; 2017: Yuryshynets<?php //do_action( 'generate_credits' ); ?>	</div>
+			<div class="clear-both"></div>
+			<div class="metrika">
+				
+		<!-- Yandex.Metrika informer -->
+	<a href="https://metrika.yandex.ru/stat/?id=42520444&amp;from=informer"
+	target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/42520444/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+	style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="42520444" data-lang="ru" /></a>
+	<!-- /Yandex.Metrika informer -->
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter42520444 = new Ya.Metrika({
+	                    id:42520444,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true,
+	                    webvisor:true,
+	                    ecommerce:"dataLayer"
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/42520444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 			</div>
 		</div>
 	</footer><!-- .site-info -->
