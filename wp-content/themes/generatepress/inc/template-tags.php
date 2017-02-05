@@ -953,6 +953,7 @@ function generate_construct_footer() {
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/42520444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+	<a href="http://yandex.ru/cy?base=0&amp;host=мой_сайт"><img src="http://www.yandex.ru/cycounter?мой_сайт" width="88" height="31" alt="Индекс цитирования" border="0" /></a>.
 
 			</div>
 		</div>
