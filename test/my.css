@@ -1,4 +1,8 @@
 /*блок телефонов в хедере*/
+body{
+	min-width: 320px;
+	font-family: "Open Sans", sans-serif, cursive;
+}
 #my__phone-container{
     position: relative;
     width: 210px;
@@ -13,6 +17,8 @@
    	width: 60px;
 	background: url('/wp-content/themes/generatepress/image/phone.png');
 	background-size: 100%;
+	top: 0px;
+    left: 0px;
 }
 #my__phone-container div, #my__phone-container p{
 	display: inline-block;
@@ -25,6 +31,19 @@
 }
 .my__phone-box1{
 	left: 45px;
+}
+.inside-header .header-widget {
+    max-width: 100%;
+}
+.widget_search input.search-submit {
+    display: inline-block;
+}
+.widget input.search-field{
+	width: 60%;
+}
+#search-4{
+	float: left;
+	width: 55%;
 }
 
 /*для всего*/
@@ -60,11 +79,15 @@
 	-moz-box-shadow: 2px 10px 30px 5px rgba(17,17,17,1);
 	box-shadow: 2px 10px 30px 5px rgba(17,17,17,1);
 }
-.entry-content>p{
+.entry-content>p, .entry-content>h1{
 	margin-left:30px;
 	margin-right: 30px;
 	text-indent: 25px;
 	text-align: justify;
+}
+.entry-content>h1{
+	font-size: 25px;
+	margin-top: 25px;
 }
 .ewf-wrapper>p{
 	text-indent: 25px;
@@ -81,7 +104,7 @@
 .entry-content{
 	padding-bottom: 15px;
 }
-#my__first{
+#my__first, h1{
 	margin-top: 25px;
 }
 .entry-title{
@@ -118,14 +141,26 @@
 .breadcrumbs{
 	margin-top: 15px;
 }
-.header-widget {
-    max-width: 100%;
-}
+
 .clear-both{
 	clear: both;
 }
 .metrika{
 	display: table;
+}
+.my__step-container{
+	width: 100%;
+}
+.my__title{
+	width: 100%;
+}
+#post-34 h2{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+#post-34 ul{
+    margin: 0 0 1.5em 5em;
 }
 .phone_coll{
 	display: inline-block;
@@ -136,12 +171,13 @@
     left: 0px;
     top: 0px;
 }
+
 /* -------------------------------for all ------------------------------------*/
 /*-----------------------------блок "три шага"------------------------*/
 
 #my__step, .my__stap-container{
 	width: 100%;
-	min-width: 768px;
+	min-width: 320px;
 	position: relative;
 	height: 300px;
 	border-top: 3px dashed #111111;
@@ -219,4 +255,56 @@ img{
 	/*#search-4{
 		display: none;
 	}*/
+	header .header-widget .widget {
+		padding: 0px;
+		margin-bottom: 0px;
+	}
+	header .inside-header .header-widget{
+		margin-bottom: 0px;
+	}
+	.entry-content>p{
+		margin-left: 5px;
+    	margin-right: 5px;
+	}
+	.entry-content .images {
+		width: 100%;
+    	margin: 0px;
+	}
+	#my__step .my__item {
+		display: block;
+    	margin: 0 auto 40px auto;
+    	position: relative;
+    	left: inherit;
+	}
+	.my__line{
+		top: 52%;
+	}
+	#my__step, .my__stap-container {
+		height: inherit;
+	}
+}
+@media (max-width: 500px){
+	#search-4{
+		display: none;
+	}
+	.inside-header .header-widget{
+		float: right;
+	}
+	.header-widget{
+		width: 50%;
+	}
+	.inside-header .site-logo{
+		width: 50%;
+	}
+	#my__phone-container .my__logo{
+		display: none;
+	}
+	.posts-item {
+		width: 100%;
+		height: inherit;
+		margin: 0px;
+	}
+	.my__line{
+		transform: rotate(90deg);
+	}
 }
