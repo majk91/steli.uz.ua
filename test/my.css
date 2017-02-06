@@ -127,7 +127,15 @@
 .metrika{
 	display: table;
 }
-
+.phone_coll{
+	display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
 /* -------------------------------for all ------------------------------------*/
 /*-----------------------------блок "три шага"------------------------*/
 
